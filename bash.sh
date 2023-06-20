@@ -67,7 +67,7 @@ else
         IP_LIST+=(`cat $LOGDIR/tarrascue_access.log | grep "$dacc" | awk '{print $1}' | sort | uniq -c | sort -nr | head -$XCOUNT`)
         IP_ADDR+=(`cat $LOGDIR/tarrascue_access.log | grep "$dacc" | awk '{print $7}' | sort | uniq -c | sort -nr | head -$YCOUNT`)
         HTTP_STATUS+=(`cat $LOGDIR/tarrascue_access.log | grep "$dacc" | awk '{print $9}' | sort | uniq -c | sort -nr`)
-        ERRORS+=(`cat $LOGDIR/tarrascue.error.log | grep "$errd"`)
+        ERRORS+=(`cat $LOGDIR/tarrascue_error.log | grep "$errd"`)
         send_email $recipient
         rm -r $PIDFILE
         trap - INT TERM EXIT
