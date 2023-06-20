@@ -44,8 +44,6 @@ cron с условием запуска раз в час:
 <pre>
 * */1 * * *  root /bin/sh /bash.sh >/var/log/wlen.log 2>&1
 </pre>
-с перенаправлением лога самого скрипта в файл.
-
 
 ```
 Content-Description: Undelivered Message
